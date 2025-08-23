@@ -8,9 +8,9 @@ This is a **simple Kotlin Android app** designed to **display AdMob banner and i
 - Fully customizable with your own AdMob App ID and Ad Unit IDs
 
 ## Your AdMob Settings
-- **App ID**: `ca-app-pub-8374675853044520~5830108183`
-- **Banner Ad Unit**: `ca-app-pub-8374675853044520/5188493240`
-- **Interstitial Ad Unit**: `ca-app-pub-8374675853044520/1843595861`
+- **App ID**: `ca-app-pub-xxxxxxxxxxxxxxxx~xxxxxxxxxxx`
+- **Banner Ad Unit**: `ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxxx`
+- **Interstitial Ad Unit**: `ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxxx`
 
 ## How to Build
 1. Clone the repository:
