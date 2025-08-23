@@ -21,20 +21,22 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          # Caching speeds up builds by reusing downloaded dependencies
           cache: 'gradle'
 
       - name: Grant execute permission for Gradle Wrapper
-        # This fixes common permission errors
         run: chmod +x ./gradlew
+        # This is the key change 👇
+        working-directory: ./AdsDisplayApp/
 
       - name: Build APK
-        # We use a build command that runs without the Gradle daemon, which is more reliable in CI environments
         run: ./gradlew assembleDebug --no-daemon
+        # This is the key change 👇
+        working-directory: ./AdsDisplayApp/
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          # This is also updated to find the APK
+          path: AdsDisplayApp/app/build/outputs/apk/debug/app-debug.apk
           
