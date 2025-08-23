@@ -25,18 +25,18 @@ jobs:
 
       - name: Grant execute permission for Gradle Wrapper
         run: chmod +x ./gradlew
-        # This is the key change 👇
-        working-directory: ./AdsDisplayApp/
+        # This is where the workflow is directed to the correct folder
+        working-directory: ./adsdisplayapp/
 
       - name: Build APK
         run: ./gradlew assembleDebug --no-daemon
-        # This is the key change 👇
-        working-directory: ./AdsDisplayApp/
+        # This is where the workflow runs the build command from your project's directory
+        working-directory: ./adsdisplayapp/
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          # This is also updated to find the APK
-          path: AdsDisplayApp/app/build/outputs/apk/debug/app-debug.apk
+          # The path to the artifact is also relative to the root of your repository
+          path: adsdisplayapp/app/build/outputs/apk/debug/app-debug.apk
           
