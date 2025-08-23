@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.mellytech.addisplay'
+    namespace 'com.mellytech.adsdisplay'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.mellytech.addisplay"
+        applicationId "com.mellytech.adsdisplay"
         minSdk 24
         targetSdk 34
         versionCode 1
