@@ -1,4 +1,4 @@
-package com.example.addisplay
+package com.mellytech.addisplay
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
